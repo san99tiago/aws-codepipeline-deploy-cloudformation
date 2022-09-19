@@ -54,3 +54,6 @@ Outputs:
   BucketArn:
     Description: S3 bucket arn
     Value: !GetAtt MyBucket.Arn
+  SampleToken:
+    Description: Sample Token
+    Value: !GetAtt SampleToken
