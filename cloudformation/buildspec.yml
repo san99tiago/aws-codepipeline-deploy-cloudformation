@@ -13,7 +13,8 @@ phases:
     commands:
       - mkdir -p "artifacts"
       - cp "cloudformation/simple-s3-cf.yml" "artifacts/simple-s3-cf.yml"
-      - cp "cloudformation/simple-s3-configuration.json" "artifacts/simple-s3-configuration.json"
+      - cat "cloudformation/simple-s3-configuration.json"
+      - sed -e "s/\${TOKEN}/$TOKEN/g" "cloudformation/simple-s3-configuration.json" > "artifacts/simple-s3-configuration.json"
       - cat "artifacts/simple-s3-configuration.json"
 
 artifacts:
