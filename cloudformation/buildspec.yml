@@ -10,6 +10,8 @@ phases:
     commands:
       - echo "TOKEN FOR THE PIPELINE IS:"
       - echo $TOKEN
+      - echo "ENVIRONMENT FOR THE PIPELINE IS:"
+      - echo $ENVIRONMENT
   build:
     commands:
       - mkdir -p "artifacts"
