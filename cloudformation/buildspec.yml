@@ -14,7 +14,7 @@ phases:
       - mkdir -p "artifacts"
       - cp "cloudformation/simple-s3-cf.yml" "artifacts/simple-s3-cf.yml"
       - cp "cloudformation/simple-s3-configuration.json" "artifacts/simple-s3-configuration.json"
-      - cat "artifacts/simple-s3-configuration.yml"
+      - cat "artifacts/simple-s3-configuration.json"
 
 artifacts:
   files:
