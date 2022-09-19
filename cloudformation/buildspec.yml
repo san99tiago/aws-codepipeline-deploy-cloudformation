@@ -1,0 +1,21 @@
+version: 0.2
+
+env:
+  parameter-store:
+    TOKEN: /dev/tests/pipelinetoken
+
+phases:
+  pre_build:
+    commands:
+      - echo "TOKEN FOR THE PIPELINE IS:"
+      - echo $TOKEN
+  build:
+    commands:
+      - cp "cloudformation/simple-s3-cf.yml artifacts/simple-s3-cf.yml"
+      - cp "cloudformation/simple-s3-configuration.yml artifacts/simple-s3-configuration.yml"
+      - cat "artifacts/simple-s3-configuration.yml"
+
+artifacts:
+  files:
+    - "artifacts/simple-s3-cf.yml"
+    - "artifacts/simple-s3-configuration.yml"

@@ -1,6 +1,7 @@
 {
   "Parameters": {
-    "AppName": "replaced-cool-santi-simple-app"
+    "AppName": "replaced-cool-santi-simple-app",
+    "SampleToken": "TO-DO"
   },
   "Tags": {
     "Environment": "Development"

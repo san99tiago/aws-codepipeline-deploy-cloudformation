@@ -6,6 +6,9 @@ Parameters:
     Description: Name of the Application.
     Type: String
     Default: sample-santi-simple-app
+  SampleToken:
+    Description: Sample token.
+    Type: String
   Environment:
     Description: Environment for the deployment (dev, qa, pdn)
     Type: String
