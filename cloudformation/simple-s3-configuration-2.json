@@ -1,0 +1,9 @@
+"configuration": {
+  "Capabilities": "CAPABILITY_IAM,CAPABILITY_AUTO_EXPAND",
+  "StackName": "SimpleS3Deployment",
+  "TemplatePath": "SimpleS3Deployment::cloudformation/simple-s3-cf.yml",
+  "TemplateConfiguration": "SimpleS3Deployment::cloudformation/simple-s3-configuration.json",
+  "ParameterOverrides": {
+    "AppName": "replaced-cool-santi-simple-app",
+  }
+}

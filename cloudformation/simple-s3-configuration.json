@@ -1,0 +1,8 @@
+{
+  "Parameters": {
+    "AppName": "replaced-cool-santi-simple-app"
+  },
+  "Tags": {
+    "Environment": "Development"
+  }
+}
