@@ -56,4 +56,4 @@ Outputs:
     Value: !GetAtt MyBucket.Arn
   SampleToken:
     Description: Sample Token
-    Value: !GetAtt SampleToken
+    Value: !Ref SampleToken
