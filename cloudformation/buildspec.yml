@@ -2,7 +2,8 @@ version: 0.2
 
 env:
   parameter-store:
-    TOKEN: /dev/tests/pipelinetoken
+    TOKEN: /tests/simple-s3-pipeline/token
+    ENVIRONMENT: /tests/simple-s3-pipeline/environment
 
 phases:
   pre_build:
@@ -14,7 +15,7 @@ phases:
       - mkdir -p "artifacts"
       - cp "cloudformation/simple-s3-cf.yml" "artifacts/simple-s3-cf.yml"
       - cat "cloudformation/simple-s3-configuration.json"
-      - sed -e "s/\${TOKEN}/$TOKEN/g" "cloudformation/simple-s3-configuration.json" > "artifacts/simple-s3-configuration.json"
+      - sed -e "s/\${ENVIRONMENT}/$ENVIRONMENT/g;s/\${TOKEN}/$TOKEN/g" "cloudformation/simple-s3-configuration.json" > "artifacts/simple-s3-configuration.json"
       - cat "artifacts/simple-s3-configuration.json"
 
 artifacts:
