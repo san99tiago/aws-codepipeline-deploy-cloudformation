@@ -11,8 +11,8 @@ phases:
       - echo $TOKEN
   build:
     commands:
-      - cp "cloudformation/simple-s3-cf.yml artifacts/simple-s3-cf.yml"
-      - cp "cloudformation/simple-s3-configuration.yml artifacts/simple-s3-configuration.yml"
+      - cp "cloudformation/simple-s3-cf.yml" "artifacts/simple-s3-cf.yml"
+      - cp "cloudformation/simple-s3-configuration.yml" "artifacts/simple-s3-configuration.yml"
       - cat "artifacts/simple-s3-configuration.yml"
 
 artifacts:
