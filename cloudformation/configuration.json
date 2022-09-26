@@ -1,0 +1,15 @@
+{
+  "Parameters": {
+    "AppName": "${MAIN_RESOURCES_NAME}",
+    "Environment": "${ENVIRONMENT}",
+    "BucketName": "${MAIN_RESOURCES_NAME}",
+    "VersioningConfiguration": "Suspended"
+  },
+  "Tags": {
+    "Environment": "${ENVIRONMENT}",
+    "Application": "aws-codepipeline-simple-cf",
+    "Owner": "Santiago Garcia Arango",
+    "Usage": "Simple S3 deployed from CodePipeline with CloudFormation template",
+    "GitHubRepo": "https://github.com/san99tiago/aws-codepipeline-simple-cf"
+  }
+}

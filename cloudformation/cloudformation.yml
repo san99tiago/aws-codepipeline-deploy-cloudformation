@@ -1,22 +1,18 @@
 AWSTemplateFormatVersion: 2010-09-09
-Description: Deploys a simple S3 bucket from given parameters.
+Description: Deploys a super-simple S3 bucket from set of given parameters.
 
 Parameters:
   AppName:
     Description: Name of the Application.
     Type: String
     Default: sample-santi-simple-app
-  SampleToken:
-    Description: Sample token.
-    Type: String
   Environment:
-    Description: Environment for the deployment (dev, qa, pdn)
+    Description: Environment for the deployment (development, production)
     Type: String
     Default: dev
     AllowedValues:
-      - dev
-      - qa
-      - pdn
+      - development
+      - production
     ConstraintDescription: Must be a valid environment.
   BucketName:
     Description: Name for the S3 bucket.
@@ -35,12 +31,12 @@ Resources:
     Type: AWS::S3::Bucket
     Properties:
       AccessControl: Private
-      BucketName: !Ref BucketName
+      BucketName: !Join ["-", [!Ref BucketName, !Ref Environment]]
       VersioningConfiguration:
         Status: !Ref VersioningConfiguration
       Tags:
         - Key: Name
-          Value: !Join ["-", [s3-bucket, !Ref AppName, !Ref Environment]]
+          Value: !Join ["-", [!Ref BucketName, !Ref Environment]]
         - Key: Environment
           Value: !Ref Environment
 
@@ -54,6 +50,3 @@ Outputs:
   BucketArn:
     Description: S3 bucket arn
     Value: !GetAtt MyBucket.Arn
-  SampleToken:
-    Description: Sample Token
-    Value: !Ref SampleToken
