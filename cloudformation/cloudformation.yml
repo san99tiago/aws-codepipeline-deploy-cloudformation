@@ -9,7 +9,7 @@ Parameters:
   Environment:
     Description: Environment for the deployment (development, production)
     Type: String
-    Default: dev
+    Default: development
     AllowedValues:
       - development
       - production
